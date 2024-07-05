@@ -1,0 +1,16 @@
+/Users/raca/Desktop/Restaurants/Restaurants.Application/bin/Debug/net8.0/Restaurants.Application.deps.json
+/Users/raca/Desktop/Restaurants/Restaurants.Application/bin/Debug/net8.0/Restaurants.Application.dll
+/Users/raca/Desktop/Restaurants/Restaurants.Application/bin/Debug/net8.0/Restaurants.Application.pdb
+/Users/raca/Desktop/Restaurants/Restaurants.Application/bin/Debug/net8.0/Restaurants.Domain.dll
+/Users/raca/Desktop/Restaurants/Restaurants.Application/bin/Debug/net8.0/Restaurants.Domain.pdb
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaurants.Application.csproj.AssemblyReference.cache
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaurants.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaurants.Application.AssemblyInfoInputs.cache
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaurants.Application.AssemblyInfo.cs
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaurants.Application.csproj.CoreCompileInputs.cache
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaurants.Application.sourcelink.json
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaura.6AB96A7C.Up2Date
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaurants.Application.dll
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/refint/Restaurants.Application.dll
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/Restaurants.Application.pdb
+/Users/raca/Desktop/Restaurants/Restaurants.Application/obj/Debug/net8.0/ref/Restaurants.Application.dll
