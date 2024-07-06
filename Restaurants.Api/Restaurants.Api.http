@@ -5,7 +5,23 @@
 GET {{Restaurants_Api_HostAddress}}/api/restaurants
 
 ###
-GET {{Restaurants_Api_HostAddress}}/api/restaurants/4
+GET {{Restaurants_Api_HostAddress}}/api/restaurants/1
 
 ###
+POST {{Restaurants_Api_HostAddress}}/api/restaurants
+Content-Type: application/json
 
+{
+    "name": "Pizzeria Bella Italia",
+    "description": "Authentic Italian pizza with fresh ingredients",
+    "category": "Italian",
+    "hasDelivery": true,
+    "contactEmail": "info@bellaitalia.com",
+    "contactNumber": "+1234567890",
+    "city": "New York",
+    "street": "123 Pizza Street",
+    "postalCode": "10-001"
+}
+
+
+###
