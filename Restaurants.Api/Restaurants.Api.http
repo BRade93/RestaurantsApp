@@ -5,14 +5,23 @@
 GET {{Restaurants_Api_HostAddress}}/api/restaurants
 
 ###
-GET {{Restaurants_Api_HostAddress}}/api/restaurants/1
+
+GET {{Restaurants_Api_HostAddress}}/api/restaurants/3/dishes
+
+###
+
+GET {{Restaurants_Api_HostAddress}}/api/restaurants/1/dishes/2
+
+###
+
+GET {{Restaurants_Api_HostAddress}}/api/restaurants/3
 
 ###
 POST {{Restaurants_Api_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-    "name": "Pizzeria Bella Italia",
+    "name": "Pizzeria Bella Italia Tests",
     "description": "Authentic Italian pizza with fresh ingredients",
     "category": "Italian",
     "hasDelivery": true,
@@ -23,5 +32,33 @@ Content-Type: application/json
     "postalCode": "10-001"
 }
 
+
+###
+DELETE {{Restaurants_Api_HostAddress}}/api/restaurants/5
+
+###
+
+PATCH  {{Restaurants_Api_HostAddress}}/api/restaurants/6
+Content-Type: application/json
+
+{
+    "Name": "Pizzeria Bella Italia Rome",
+    "Description": "Authentic Italian pizza with fresh ingredients in the heart of Rome",
+    "HasDelivery": true
+}
+
+###
+
+POST {{Restaurants_Api_HostAddress}}/api/restaurants/3/dishes
+Content-Type: application/json
+
+{
+    "name": "Spaghetti Bolognese",
+    "description": "Classic Italian pasta dish with rich meat souce.",
+    "price": 12.99,
+    "kiloCalories": 800
+}
+###
+DELETE  {{Restaurants_Api_HostAddress}}/api/restaurants/3/dishes
 
 ###

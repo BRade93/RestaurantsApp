@@ -10,7 +10,7 @@ public static class ServiceCollectionExtension
     public static void AddApplication(this IServiceCollection services)
     {
         var assembly = AppDomain.CurrentDomain.GetAssemblies();
-        services.AddScoped<IRestaurantService, RestaurantsService>();
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ServiceCollectionExtension).Assembly));
         services.AddAutoMapper(assembly);
         services.AddValidatorsFromAssemblies(assembly)
         .AddFluentValidationAutoValidation();
