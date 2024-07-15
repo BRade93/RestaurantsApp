@@ -1,15 +1,20 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application;
 using Restaurants.Application.Dtos;
 using Restaurants.Domain;
+using Restaurants.Infrastructure;
 
 namespace Restaurants.Api;
 [ApiController]
 [Route("api/restaurants")]
+[Authorize]
 public class RestaurantsController(IMediator mediator) : ControllerBase
 {
+
     [HttpGet]
+    [Authorize(Policy = PolicyNames.AtLeast2RestaurantsCreated)]
     public async Task<ActionResult<IEnumerable<RestaurantDto>>> GetAll()
     {
         var restaurants = await mediator.Send(new GetAllRestaurantsQuery());
@@ -17,6 +22,7 @@ public class RestaurantsController(IMediator mediator) : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [Authorize(Policy = PolicyNames.HasNationality)]
     public async Task<ActionResult<RestaurantDto>> GetById(int id)
     {
         var restaurant = await mediator.Send(new GetRestaurantByIdQuery(id));
@@ -24,6 +30,7 @@ public class RestaurantsController(IMediator mediator) : ControllerBase
         return Ok(restaurant);
     }
     [HttpPost]
+    [Authorize(Roles = UserRoles.Owner)]
     public async Task<IActionResult> AddRestaurant(CreateRestaurantCommand command)
     {
         int id = await mediator.Send(command);
@@ -46,6 +53,6 @@ public class RestaurantsController(IMediator mediator) : ControllerBase
         command.Id = id;
         await mediator.Send(command);
 
-        return NotFound();
+        return NoContent();
     }
 }

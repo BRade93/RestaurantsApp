@@ -1,12 +1,14 @@
 @host = http://localhost
 @port = 5253
+@token = CfDJ8NlMkeAGnq9LpYY5a5PGQhXW3RXZPUENFt5rfi1xGZhAxkNtgOTHF7o9M-h7U7OGMJQIRnEG-xIHHER_IUJ9vCXt7dZkolqxGCckYHj1BKOIYozGvrJpTBWz9Wwntk4wLAea4qAv9opo0L6wB96MW9Ztw2MV7y0Wkgi0rLQcHLVLNtRzL7dW0-Oq5PHPnP_1_WrbhZvU7hvlA3ScRg9b9rx1AtzcUAHK6Cfp4kF9QPDOM3tQD5g5ZIuuHCc4wwPtNj5ZwlSKGW_5YIXlz98RuwGRlpF3OhgO5JXtTiwLpsQMitodpoIqyI6X-IiSlzUp737sbiNKnvcVNGLU5ZTqBgcFSXXnBu0KaPK9gj7O59Yh1CXsfYaHiIFZayy1ZSt6t_VRANh4shGBM95pIlNE4LkBZyYD1Urxu3OnZvJF-Wiiqq-F_ta09IXhQyLwthY65CsJkz7VisP4bnJ2E75C3QiCNu8A-oGlnVxa-M_12YYGzBZwFpDquL1mHX-zLvf68l8PxBRdv0aDpSxpME2pmME7qhVL0BG-f7UQ1JrY3zM36MXGr1rjzGeXCQsBeJkP7DtdYcfSEqR0qPUUH5uVdVIwNRDtUCEDkBEolwIR9QZP9v-IMBBFkYRWOZv_62gSCN65n7POAKra-ovS5WBYaPQWDlzgzGp6x3UrUzM7iyG_RmI8tKzRXzjO7iHDTG8wNaEx9EZC9f6vbundlQIV2eyyLSWwDbVRp5lHEOFG8utbblp8V3GRUOxmxHJSwqMLOdMee6RKX5ciKYkd7AuIgdlAEpG4mLbrPAMdAAQl1Xvp
 @Restaurants_Api_HostAddress = {{host}}:{{port}}
 
 GET {{Restaurants_Api_HostAddress}}/api/restaurants
-
+Authorization: Bearer {{token}}
 ###
 
 GET {{Restaurants_Api_HostAddress}}/api/restaurants/3/dishes
+Authorization: Bearer {{token}}
 
 ###
 
@@ -15,13 +17,14 @@ GET {{Restaurants_Api_HostAddress}}/api/restaurants/1/dishes/2
 ###
 
 GET {{Restaurants_Api_HostAddress}}/api/restaurants/3
-
+Authorization: Bearer {{token}}
 ###
 POST {{Restaurants_Api_HostAddress}}/api/restaurants
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "name": "Pizzeria Bella Italia Tests",
+    "name": "Owner Restaurant 4",
     "description": "Authentic Italian pizza with fresh ingredients",
     "category": "Italian",
     "hasDelivery": true,
@@ -35,14 +38,16 @@ Content-Type: application/json
 
 ###
 DELETE {{Restaurants_Api_HostAddress}}/api/restaurants/5
+Authorization: Bearer {{token}}
 
 ###
 
 PATCH  {{Restaurants_Api_HostAddress}}/api/restaurants/6
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "Name": "Pizzeria Bella Italia Rome",
+    "Name": "Updated restaurant by owner",
     "Description": "Authentic Italian pizza with fresh ingredients in the heart of Rome",
     "HasDelivery": true
 }
@@ -61,4 +66,41 @@ Content-Type: application/json
 ###
 DELETE  {{Restaurants_Api_HostAddress}}/api/restaurants/3/dishes
 
+###
+
+POST {{Restaurants_Api_HostAddress}}/api/identity/login
+Content-Type: application/json
+
+{
+    "email": "owner2@test.com",
+    "password": "Admin123!"
+}
+###
+POST {{Restaurants_Api_HostAddress}}/api/identity/register
+Content-Type: application/json
+
+{
+    "email": "owner2@test.com",
+    "password": "Admin123!"
+}
+###
+
+PATCH  {{Restaurants_Api_HostAddress}}/api/identity/user
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "nationality": "French",
+    "dateOfBirth": "2000-03-11"
+}
+###
+
+POST {{Restaurants_Api_HostAddress}}/api/identity/userRole
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "userEmail": "owner2@test.com",
+    "RoleName": "Owner"
+}
 ###

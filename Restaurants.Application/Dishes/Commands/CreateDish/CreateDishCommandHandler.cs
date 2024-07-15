@@ -3,10 +3,12 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using Restaurants.Application.Dishes.CreateDish;
 using Restaurants.Domain;
+using Restaurants.Domain.Constants;
+using Restaurants.Domain.Interfaces;
 
 namespace Restaurants.Application;
 
-public class CreateDishCommandHandler(ILogger<CreateDishCommandHandler> logger, IRestaurantRepository restaurantRepository, IDishRepository dishRepository, IMapper mapper)
+public class CreateDishCommandHandler(ILogger<CreateDishCommandHandler> logger, IRestaurantRepository restaurantRepository, IDishRepository dishRepository, IMapper mapper, IRestaurantAuthorizationService restaurantAuthorizationService)
 : IRequestHandler<CreateDishCommand, int>
 {
     public async Task<int> Handle(CreateDishCommand request, CancellationToken cancellationToken)
@@ -16,6 +18,11 @@ public class CreateDishCommandHandler(ILogger<CreateDishCommandHandler> logger, 
         var restaurant = await restaurantRepository.GetByIdAsync(request.RestaurantId) ?? throw new NotFoundException(nameof(Restaurant), request.RestaurantId.ToString());
 
         var dish = mapper.Map<Dish>(request);
+
+        if (!restaurantAuthorizationService.Authorize(restaurant, ResourceOperation.Create))
+        {
+            throw new ForbidException();
+        }
 
         return await dishRepository.Create(dish);
 

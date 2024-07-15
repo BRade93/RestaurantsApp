@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Restaurants.Domain;
+using Restaurants.Domain.Entities.User;
 
 namespace Restaurants.Infrastructure;
 
-internal class RestaurantDbContext(DbContextOptions<RestaurantDbContext> options) : DbContext(options)
+internal class RestaurantDbContext(DbContextOptions<RestaurantDbContext> options) : IdentityDbContext<User>(options)
 {
     internal DbSet<Restaurant> Restaurants { get; set; }
     internal DbSet<Dish> Dishes { get; set; }
@@ -14,11 +16,16 @@ internal class RestaurantDbContext(DbContextOptions<RestaurantDbContext> options
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<Restaurant>()
-        .OwnsOne(r => r.Address);
+            .OwnsOne(r => r.Address);
 
         modelBuilder.Entity<Restaurant>()
-        .HasMany(r => r.Dishes)
-        .WithOne()
-        .HasForeignKey(d => d.RestaurantId);
+            .HasMany(r => r.Dishes)
+            .WithOne()
+            .HasForeignKey(d => d.RestaurantId);
+
+        modelBuilder.Entity<User>()
+            .HasMany(r => r.OwnedRestaurants)
+            .WithOne(o => o.Owner)
+            .HasForeignKey(f => f.OwnerId);
     }
 }
