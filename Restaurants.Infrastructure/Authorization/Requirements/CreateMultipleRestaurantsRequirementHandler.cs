@@ -13,7 +13,7 @@ public class CreateMultipleRestaurantsRequirementHandler(IRestaurantRepository r
 
         var restaurants = await restaurantRepository.GetAllAsync();
 
-        var userRestaurantsCreated = restaurants.Count(r => r.OwnerId == currentUser.Id);
+        var userRestaurantsCreated = restaurants.Count(r => r.OwnerId == currentUser?.Id);
 
         if (userRestaurantsCreated >= requirement.MinimumRestaurantsCreated)
         {
