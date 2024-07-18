@@ -1,13 +1,13 @@
 @host = http://localhost
 @port = 5253
-@token = CfDJ8NlMkeAGnq9LpYY5a5PGQhXW3RXZPUENFt5rfi1xGZhAxkNtgOTHF7o9M-h7U7OGMJQIRnEG-xIHHER_IUJ9vCXt7dZkolqxGCckYHj1BKOIYozGvrJpTBWz9Wwntk4wLAea4qAv9opo0L6wB96MW9Ztw2MV7y0Wkgi0rLQcHLVLNtRzL7dW0-Oq5PHPnP_1_WrbhZvU7hvlA3ScRg9b9rx1AtzcUAHK6Cfp4kF9QPDOM3tQD5g5ZIuuHCc4wwPtNj5ZwlSKGW_5YIXlz98RuwGRlpF3OhgO5JXtTiwLpsQMitodpoIqyI6X-IiSlzUp737sbiNKnvcVNGLU5ZTqBgcFSXXnBu0KaPK9gj7O59Yh1CXsfYaHiIFZayy1ZSt6t_VRANh4shGBM95pIlNE4LkBZyYD1Urxu3OnZvJF-Wiiqq-F_ta09IXhQyLwthY65CsJkz7VisP4bnJ2E75C3QiCNu8A-oGlnVxa-M_12YYGzBZwFpDquL1mHX-zLvf68l8PxBRdv0aDpSxpME2pmME7qhVL0BG-f7UQ1JrY3zM36MXGr1rjzGeXCQsBeJkP7DtdYcfSEqR0qPUUH5uVdVIwNRDtUCEDkBEolwIR9QZP9v-IMBBFkYRWOZv_62gSCN65n7POAKra-ovS5WBYaPQWDlzgzGp6x3UrUzM7iyG_RmI8tKzRXzjO7iHDTG8wNaEx9EZC9f6vbundlQIV2eyyLSWwDbVRp5lHEOFG8utbblp8V3GRUOxmxHJSwqMLOdMee6RKX5ciKYkd7AuIgdlAEpG4mLbrPAMdAAQl1Xvp
+@token = CfDJ8NlMkeAGnq9LpYY5a5PGQhVFkG8ebbdiuWqB6ZnxhN2sIryiVu1ZAMaJ8v-CXXn756bSrXPOjSxPj_g_-ogM3MkD6ouDEnfjXtem3RLQp52u_YDZzgs9U4IGzi4-6Xj4WB_AvZ4TKGjPVGtKZidUemsz3ykXifVlVxJsmf_AUXIFBI4CPH7gOZyOmaN7WmezeDzVKzlHTr_9Lo2EpXN1MpfeoHoQaG7zZEuLHavKR_DhpTczqJdjYpylE1yQiUfA6PAbmhaIngLcoo2QuzC0WTp32uyffu9dufv9lOmhFGcIW2u5qkMd8Fa1FgcszmeKfkIDYznxCvoouxjbYRqzTOIpnlTsLXuNGpzcujtm4jc71-WtlO_H_2nitp0MU0qGdEh1tw0CyjKrsn1RR9W-ZzDWl1rE-21_qUw-Syy2ZohL38GMB9bgEAgLN9YMsc5oPjBURkU7Ec7gcq19zTRNNkAzc2o2JXihiHa4PgXKcJDm7a2aeNv7X9YPBifXvZh1KA3eMMT5OifNN8rzdvg46JzJkb-ceO-DowvNTo2giqbYCYZ7aGieGuqcgbmqXtIGWJM4LBerLGGdrqKKHTT2EvnJ_HWRMccinM077DX9IbGgMqKTP3BnHqdpbaOmdiusyEdV3UI9YuILT2VhkDHoHvbfdg-0Iexk9t6dvxnDIEqXTQrDC3Mui8-0rqp73dXqugk1C7Xkru9F7vHI6mlBxz24oCRrRWp36A6t8d1895XBtfEZ5LqtdH0Ap4V6C9VfssLnvGdnTiOWwoTzcw-zr2m9hB9A-h7jO2WmtFjoBtz8yfr6GrVv19QGuREHL0T_uj7vtI8sVW_Z00N-9DS0Z7A
 @Restaurants_Api_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants_Api_HostAddress}}/api/restaurants
+GET {{Restaurants_Api_HostAddress}}/api/restaurants?pageSize=5&pageNumber=4&sortBy=Name&sortDirection=Ascending
 Authorization: Bearer {{token}}
 ###
 
-GET {{Restaurants_Api_HostAddress}}/api/restaurants/3/dishes
+GET {{Restaurants_Api_HostAddress}}/api/restaurants/4/dishes
 Authorization: Bearer {{token}}
 
 ###
@@ -24,7 +24,7 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name": "Owner Restaurant 4",
+    "name": "Owner Restaurant 7",
     "description": "Authentic Italian pizza with fresh ingredients",
     "category": "Italian",
     "hasDelivery": true,
@@ -72,7 +72,7 @@ POST {{Restaurants_Api_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
-    "email": "owner2@test.com",
+    "email": "owner@test.com",
     "password": "Admin123!"
 }
 ###
@@ -90,7 +90,7 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "nationality": "French",
+    "nationality": "Serbian",
     "dateOfBirth": "2000-03-11"
 }
 ###
