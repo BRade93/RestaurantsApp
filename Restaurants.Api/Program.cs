@@ -3,7 +3,7 @@ using Restaurants.Infrastructure.Extensions;
 using Restaurants.Application.Extensions;
 using Serilog;
 using Restaurants.Api;
-using Restaurants.Domain.Entities.User;
+using Restaurants.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 

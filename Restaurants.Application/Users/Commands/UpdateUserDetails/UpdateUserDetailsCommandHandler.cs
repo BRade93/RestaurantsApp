@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Restaurants.Domain;
-using Restaurants.Domain.Entities.User;
 
 namespace Restaurants.Application.Users.Commands.UpdateUserDetails;
 

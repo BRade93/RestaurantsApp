@@ -1,3 +1,9 @@
+/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.csproj.AssemblyReference.cache
+/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.AssemblyInfoInputs.cache
+/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.AssemblyInfo.cs
+/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.sourcelink.json
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/bin/Debug/net8.0/Restaurants.Infrastructure.deps.json
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/bin/Debug/net8.0/Restaurants.Infrastructure.runtimeconfig.json
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/bin/Debug/net8.0/Restaurants.Infrastructure.dll
@@ -6,12 +12,6 @@
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/bin/Debug/net8.0/Restaurants.Domain.dll
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/bin/Debug/net8.0/Restaurants.Application.pdb
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/bin/Debug/net8.0/Restaurants.Domain.pdb
-/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.csproj.AssemblyReference.cache
-/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.AssemblyInfoInputs.cache
-/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.AssemblyInfo.cs
-/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.csproj.CoreCompileInputs.cache
-/Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.sourcelink.json
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaura.2EEA3570.Up2Date
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.dll
 /Users/raca/Desktop/Restaurants/Restaurants.Infrastructure/obj/Debug/net8.0/refint/Restaurants.Infrastructure.dll

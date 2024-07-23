@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Restaurants.Domain;
-using Restaurants.Domain.Entities.User;
 using Restaurants.Domain.Interfaces;
 using Restaurants.Infrastructure.Authorization.AuthorizationServices;
 

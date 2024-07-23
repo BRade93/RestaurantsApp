@@ -1,6 +1,4 @@
-﻿using Restaurants.Domain.Entities.User;
-
-namespace Restaurants.Domain;
+﻿namespace Restaurants.Domain;
 
 public class Restaurant
 {

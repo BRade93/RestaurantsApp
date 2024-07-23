@@ -16,7 +16,7 @@ public class GetDishByIdForRestaurantQueryHandler(ILogger<GetDishByIdForRestaura
         var dish = restaurant.Dishes.FirstOrDefault(d => d.Id == request.DishId) ?? throw new NotFoundException(nameof(Dish), request.DishId.ToString());
 
         var result = mapper.Map<DishDto>(dish);
-        
+
         return result;
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Restaurants.Domain.Entities.User;
+namespace Restaurants.Domain;
 
 public class User : IdentityUser
 {

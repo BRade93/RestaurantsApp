@@ -46,8 +46,8 @@ internal class RestaurantRepository(RestaurantDbContext context) : IRestaurantRe
             };
 
             var selectedColumn = columnsSelector[sortBy];
-            baseQuery = sortDirection == SortDirection.Ascending 
-            ? baseQuery.OrderBy(selectedColumn) 
+            baseQuery = sortDirection == SortDirection.Ascending
+            ? baseQuery.OrderBy(selectedColumn)
             : baseQuery.OrderByDescending(selectedColumn);
         }
 

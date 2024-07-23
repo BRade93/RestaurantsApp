@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Restaurants.Domain;
-using Restaurants.Domain.Entities.User;
 
 namespace Restaurants.Application.Users.Commands.AssignUserRole;
 

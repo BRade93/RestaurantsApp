@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
-using Restaurants.Domain.Entities.User;
+using Restaurants.Domain;
 
 namespace Restaurants.Infrastructure;
 

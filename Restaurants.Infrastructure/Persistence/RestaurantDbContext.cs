@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Restaurants.Domain;
-using Restaurants.Domain.Entities.User;
 
 namespace Restaurants.Infrastructure;
 
