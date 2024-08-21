@@ -9,7 +9,6 @@ using Restaurants.Infrastructure;
 namespace Restaurants.Api;
 [ApiController]
 [Route("api/restaurants")]
-[Authorize]
 public class RestaurantsController(IMediator mediator) : ControllerBase
 {
 

@@ -9,7 +9,7 @@
       "type": "appservice",
       "request": "launch",
       "appId": "<your-app-id>",
-      "appService.deploySubpath": "bin/Publish",
+      "appService.deploySubpath": "bin/Release/net8.0/publish",
       "appService.deployPath": "/site/wwwroot",
       "appService.publishProfile": "${workspaceFolder}/Properties/PublishProfiles/your-profile.pubxml"
     }
