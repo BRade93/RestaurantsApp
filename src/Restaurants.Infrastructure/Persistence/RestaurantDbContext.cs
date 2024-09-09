@@ -40,5 +40,10 @@ internal class RestaurantDbContext(DbContextOptions<RestaurantDbContext> options
             .HasMany(r => r.OwnedRestaurants)
             .WithOne(o => o.Owner)
             .HasForeignKey(f => f.OwnerId);
+        modelBuilder.Entity<Restaurant>()
+            .HasOne(r => r.Owner)  // Assuming Owner is a navigation property
+            .WithMany(u => u.OwnedRestaurants)
+            .HasForeignKey(r => r.OwnerId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
