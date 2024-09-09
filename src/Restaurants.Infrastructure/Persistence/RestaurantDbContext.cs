@@ -9,6 +9,21 @@ internal class RestaurantDbContext(DbContextOptions<RestaurantDbContext> options
     internal DbSet<Restaurant> Restaurants { get; set; }
     internal DbSet<Dish> Dishes { get; set; }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlServer("YourConnectionString", sqlOptions =>
+            {
+                // Enable retry on failure for transient errors
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 5, // Number of retries
+                    maxRetryDelay: TimeSpan.FromSeconds(30), // Max delay between retries
+                    errorNumbersToAdd: null // Retry on all transient errors
+                );
+            });
+        }
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

@@ -40,6 +40,7 @@ try
         app.UseDeveloperExceptionPage();
     }
     app.UseHttpsRedirection();
+    
     app.UseCors("AllowAll");
     app.MapGroup("api/identity")
         .WithTags("Identity")
